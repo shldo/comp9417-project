@@ -1,0 +1,48 @@
+{
+  "model": "XGBoost",
+  "sample_size": 5000,
+  "raw_subsample_shape": [
+    5000,
+    28
+  ],
+  "fixed_val_shape": [
+    20000,
+    28
+  ],
+  "fixed_test_shape": [
+    20000,
+    28
+  ],
+  "preprocessed_feature_shapes": {
+    "train": [
+      5000,
+      64
+    ],
+    "val": [
+      20000,
+      64
+    ],
+    "test": [
+      20000,
+      64
+    ]
+  },
+  "params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0
+  },
+  "validation_metrics": {
+    "accuracy": 0.7343,
+    "roc_auc": 0.8144343288739304,
+    "inference_time_per_sample": 2.98175000352785e-07
+  },
+  "test_metrics": {
+    "accuracy": 0.733,
+    "roc_auc": 0.8155598448466239,
+    "training_time_seconds": 0.08372130000498146,
+    "inference_time_per_sample": 3.1116000027395787e-07
+  }
+}

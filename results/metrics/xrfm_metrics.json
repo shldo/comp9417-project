@@ -1,0 +1,127 @@
+{
+  "dataset_path": "C:\\Users\\Lucifer\\Documents\\New project\\data\\raw\\sleep_health_dataset.csv",
+  "sample_size": 2000,
+  "target_column": "felt_rested",
+  "dropped_columns": [
+    "person_id",
+    "sleep_disorder_risk",
+    "cognitive_performance_score"
+  ],
+  "class_distribution": {
+    "full": {
+      "0": 1223,
+      "1": 777
+    },
+    "train": {
+      "0": 733,
+      "1": 467
+    },
+    "val": {
+      "0": 245,
+      "1": 155
+    },
+    "test": {
+      "0": 245,
+      "1": 155
+    }
+  },
+  "feature_column_count": 28,
+  "raw_feature_shape": [
+    2000,
+    28
+  ],
+  "split_shapes": {
+    "train": [
+      1200,
+      28
+    ],
+    "val": [
+      400,
+      28
+    ],
+    "test": [
+      400,
+      28
+    ]
+  },
+  "preprocessed_feature_shapes": {
+    "train": [
+      1200,
+      64
+    ],
+    "val": [
+      400,
+      64
+    ],
+    "test": [
+      400,
+      64
+    ]
+  },
+  "feature_types": {
+    "numeric_columns": [
+      "age",
+      "bmi",
+      "sleep_duration_hrs",
+      "sleep_quality_score",
+      "rem_percentage",
+      "deep_sleep_percentage",
+      "sleep_latency_mins",
+      "wake_episodes_per_night",
+      "caffeine_mg_before_bed",
+      "alcohol_units_before_bed",
+      "screen_time_before_bed_mins",
+      "exercise_day",
+      "steps_that_day",
+      "nap_duration_mins",
+      "stress_score",
+      "work_hours_that_day",
+      "heart_rate_resting_bpm",
+      "sleep_aid_used",
+      "shift_work",
+      "room_temperature_celsius",
+      "weekend_sleep_diff_hrs"
+    ],
+    "categorical_columns": [
+      "gender",
+      "occupation",
+      "country",
+      "chronotype",
+      "mental_health_condition",
+      "season",
+      "day_type"
+    ]
+  },
+  "xrfm_params": {
+    "tuning_metric": "auc",
+    "max_leaf_size": 10000,
+    "n_trees": 1,
+    "n_tree_iters": 0,
+    "rfm_params": {
+      "model": {
+        "kernel": "l2_high_dim",
+        "bandwidth": 10.0,
+        "exponent": 1.0,
+        "diag": false,
+        "bandwidth_mode": "constant"
+      },
+      "fit": {
+        "reg": 0.001,
+        "iters": 3,
+        "verbose": false,
+        "early_stop_rfm": true
+      }
+    }
+  },
+  "validation_metrics": {
+    "accuracy": 0.7,
+    "roc_auc": 0.7665437788018434,
+    "inference_time_per_sample": 3.0697499960297136e-06
+  },
+  "test_metrics": {
+    "accuracy": 0.7,
+    "roc_auc": 0.751599736668861,
+    "training_time_seconds": 0.06037490000016987,
+    "inference_time_per_sample": 2.6039999966087634e-06
+  }
+}

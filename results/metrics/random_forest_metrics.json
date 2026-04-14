@@ -1,0 +1,112 @@
+{
+  "dataset_path": "C:\\Users\\Lucifer\\Documents\\New project\\data\\raw\\sleep_health_dataset.csv",
+  "sample_size": 2000,
+  "target_column": "felt_rested",
+  "dropped_columns": [
+    "person_id",
+    "sleep_disorder_risk",
+    "cognitive_performance_score"
+  ],
+  "class_distribution": {
+    "full": {
+      "0": 1223,
+      "1": 777
+    },
+    "train": {
+      "0": 733,
+      "1": 467
+    },
+    "val": {
+      "0": 245,
+      "1": 155
+    },
+    "test": {
+      "0": 245,
+      "1": 155
+    }
+  },
+  "feature_column_count": 28,
+  "raw_feature_shape": [
+    2000,
+    28
+  ],
+  "split_shapes": {
+    "train": [
+      1200,
+      28
+    ],
+    "val": [
+      400,
+      28
+    ],
+    "test": [
+      400,
+      28
+    ]
+  },
+  "preprocessed_feature_shapes": {
+    "train": [
+      1200,
+      64
+    ],
+    "val": [
+      400,
+      64
+    ],
+    "test": [
+      400,
+      64
+    ]
+  },
+  "feature_types": {
+    "numeric_columns": [
+      "age",
+      "bmi",
+      "sleep_duration_hrs",
+      "sleep_quality_score",
+      "rem_percentage",
+      "deep_sleep_percentage",
+      "sleep_latency_mins",
+      "wake_episodes_per_night",
+      "caffeine_mg_before_bed",
+      "alcohol_units_before_bed",
+      "screen_time_before_bed_mins",
+      "exercise_day",
+      "steps_that_day",
+      "nap_duration_mins",
+      "stress_score",
+      "work_hours_that_day",
+      "heart_rate_resting_bpm",
+      "sleep_aid_used",
+      "shift_work",
+      "room_temperature_celsius",
+      "weekend_sleep_diff_hrs"
+    ],
+    "categorical_columns": [
+      "gender",
+      "occupation",
+      "country",
+      "chronotype",
+      "mental_health_condition",
+      "season",
+      "day_type"
+    ]
+  },
+  "best_params": {
+    "n_estimators": 300,
+    "max_depth": 12,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "validation_metrics": {
+    "accuracy": 0.7125,
+    "roc_auc": 0.7911257406188282,
+    "inference_time_per_sample": 0.0001279057500505587
+  },
+  "test_metrics": {
+    "accuracy": 0.725,
+    "roc_auc": 0.8076366030283082,
+    "training_time_seconds": 0.3347009999852162,
+    "inference_time_per_sample": 0.00012210724999022203
+  }
+}

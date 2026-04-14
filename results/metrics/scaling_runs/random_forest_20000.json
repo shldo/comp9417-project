@@ -1,0 +1,47 @@
+{
+  "model": "Random Forest",
+  "sample_size": 20000,
+  "raw_subsample_shape": [
+    20000,
+    28
+  ],
+  "fixed_val_shape": [
+    20000,
+    28
+  ],
+  "fixed_test_shape": [
+    20000,
+    28
+  ],
+  "preprocessed_feature_shapes": {
+    "train": [
+      20000,
+      64
+    ],
+    "val": [
+      20000,
+      64
+    ],
+    "test": [
+      20000,
+      64
+    ]
+  },
+  "params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "validation_metrics": {
+    "accuracy": 0.73855,
+    "roc_auc": 0.8165605247333381,
+    "inference_time_per_sample": 4.212290002033114e-06
+  },
+  "test_metrics": {
+    "accuracy": 0.73685,
+    "roc_auc": 0.8170648129246062,
+    "training_time_seconds": 0.9773845999734476,
+    "inference_time_per_sample": 4.328759998315945e-06
+  }
+}

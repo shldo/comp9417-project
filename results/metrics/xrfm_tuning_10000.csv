@@ -1,0 +1,6 @@
+config_id,notes,status,error_type,error_message,sample_size,validation_accuracy,validation_roc_auc,test_accuracy,test_roc_auc,training_time_seconds,inference_time_per_sample
+E,Allow splitting and average across two trees,success,,,10000,0.721,0.8020255826619694,0.7445,0.817459343002652,4.805322099999103,2.5384950000443495e-05
+A,Current baseline,success,,,10000,0.7265,0.7958398003591102,0.746,0.8119750952607325,2.925714800001515,2.103984999939712e-05
+B,Allow splitting with smaller max_leaf_size,success,,,10000,0.7255,0.795562229840982,0.7425,0.8140167339866997,2.6598598000000493,1.267344999996567e-05
+C,Allow splitting and train leaf RFM longer,success,,,10000,0.72,0.7950826467529497,0.742,0.8130444501112903,2.8187944000001153,1.344725000035396e-05
+D,Allow splitting and use one tree iteration,failed,AssertionError,,10000,,,,,,

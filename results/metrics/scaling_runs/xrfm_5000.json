@@ -1,0 +1,62 @@
+{
+  "model": "xRFM",
+  "sample_size": 5000,
+  "raw_subsample_shape": [
+    5000,
+    28
+  ],
+  "fixed_val_shape": [
+    20000,
+    28
+  ],
+  "fixed_test_shape": [
+    20000,
+    28
+  ],
+  "preprocessed_feature_shapes": {
+    "train": [
+      5000,
+      64
+    ],
+    "val": [
+      20000,
+      64
+    ],
+    "test": [
+      20000,
+      64
+    ]
+  },
+  "params": {
+    "tuning_metric": "auc",
+    "max_leaf_size": 3000,
+    "n_trees": 2,
+    "n_tree_iters": 1,
+    "rfm_params": {
+      "model": {
+        "kernel": "l2_high_dim",
+        "bandwidth": 10.0,
+        "exponent": 1.0,
+        "diag": false,
+        "bandwidth_mode": "constant"
+      },
+      "fit": {
+        "reg": 0.001,
+        "iters": 3,
+        "verbose": false,
+        "early_stop_rfm": true
+      }
+    }
+  },
+  "validation_metrics": {
+    "accuracy": 0.7199,
+    "roc_auc": 0.7873608120459988,
+    "inference_time_per_sample": 2.9758630000287668e-05
+  },
+  "test_metrics": {
+    "accuracy": 0.7225,
+    "roc_auc": 0.790821058616734,
+    "training_time_seconds": 28.511211799981538,
+    "inference_time_per_sample": 3.0091710001579485e-05
+  }
+}

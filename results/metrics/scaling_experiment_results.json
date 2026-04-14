@@ -1,0 +1,200 @@
+{
+  "dataset_path": "C:\\Users\\Lucifer\\Documents\\New project\\data\\raw\\sleep_health_dataset.csv",
+  "task": "binary classification",
+  "target_column": "felt_rested",
+  "sample_sizes": [
+    2000,
+    5000,
+    10000,
+    20000
+  ],
+  "random_state": 42,
+  "split_protocol": "One fixed full train/validation/test split is created on the full dataset first. Only the fixed training split is stratified-subsampled for each sample size. Validation and test splits remain unchanged across all sample sizes and models.",
+  "full_feature_shape": [
+    100000,
+    28
+  ],
+  "fixed_split_shapes": {
+    "train": [
+      60000,
+      28
+    ],
+    "val": [
+      20000,
+      28
+    ],
+    "test": [
+      20000,
+      28
+    ]
+  },
+  "xgboost_formal_params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0
+  },
+  "xrfm_formal_params": {
+    "tuning_metric": "auc",
+    "max_leaf_size": 3000,
+    "n_trees": 2,
+    "n_tree_iters": 1,
+    "rfm_params": {
+      "model": {
+        "kernel": "l2_high_dim",
+        "bandwidth": 10.0,
+        "exponent": 1.0,
+        "diag": false,
+        "bandwidth_mode": "constant"
+      },
+      "fit": {
+        "reg": 0.001,
+        "iters": 3,
+        "verbose": false,
+        "early_stop_rfm": true
+      }
+    }
+  },
+  "xrfm_use_one_hot_labels": true,
+  "random_forest_formal_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "results": [
+    {
+      "model": "XGBoost",
+      "sample_size": 2000,
+      "validation_accuracy": 0.72865,
+      "validation_roc_auc": 0.801235475333743,
+      "test_accuracy": 0.72075,
+      "test_roc_auc": 0.8012196140424012,
+      "training_time_seconds": 0.35683639999479055,
+      "inference_time_per_sample": 3.102099988609552e-07,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xgboost_2000.json"
+    },
+    {
+      "model": "xRFM",
+      "sample_size": 2000,
+      "validation_accuracy": 0.7202,
+      "validation_roc_auc": 0.7815676001617169,
+      "test_accuracy": 0.71695,
+      "test_roc_auc": 0.7842006796009062,
+      "training_time_seconds": 1.928390999964904,
+      "inference_time_per_sample": 5.365175000042655e-06,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xrfm_2000.json"
+    },
+    {
+      "model": "Random Forest",
+      "sample_size": 2000,
+      "validation_accuracy": 0.73245,
+      "validation_roc_auc": 0.8056142004780642,
+      "test_accuracy": 0.7297,
+      "test_roc_auc": 0.8063367429803356,
+      "training_time_seconds": 0.3356690999935381,
+      "inference_time_per_sample": 3.0642049998277797e-06,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\random_forest_2000.json"
+    },
+    {
+      "model": "XGBoost",
+      "sample_size": 5000,
+      "validation_accuracy": 0.7343,
+      "validation_roc_auc": 0.8144343288739304,
+      "test_accuracy": 0.733,
+      "test_roc_auc": 0.8155598448466239,
+      "training_time_seconds": 0.08372130000498146,
+      "inference_time_per_sample": 3.1116000027395787e-07,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xgboost_5000.json"
+    },
+    {
+      "model": "xRFM",
+      "sample_size": 5000,
+      "validation_accuracy": 0.7199,
+      "validation_roc_auc": 0.7873608120459988,
+      "test_accuracy": 0.7225,
+      "test_roc_auc": 0.790821058616734,
+      "training_time_seconds": 28.511211799981538,
+      "inference_time_per_sample": 3.0091710001579485e-05,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xrfm_5000.json"
+    },
+    {
+      "model": "Random Forest",
+      "sample_size": 5000,
+      "validation_accuracy": 0.73195,
+      "validation_roc_auc": 0.8112386648245504,
+      "test_accuracy": 0.73285,
+      "test_roc_auc": 0.813513985193214,
+      "training_time_seconds": 0.40030650002881885,
+      "inference_time_per_sample": 4.163145000347868e-06,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\random_forest_5000.json"
+    },
+    {
+      "model": "XGBoost",
+      "sample_size": 10000,
+      "validation_accuracy": 0.73755,
+      "validation_roc_auc": 0.8191390327140421,
+      "test_accuracy": 0.73635,
+      "test_roc_auc": 0.8208135258956097,
+      "training_time_seconds": 0.11816860001999885,
+      "inference_time_per_sample": 3.3307000121567397e-07,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xgboost_10000.json"
+    },
+    {
+      "model": "xRFM",
+      "sample_size": 10000,
+      "validation_accuracy": 0.72755,
+      "validation_roc_auc": 0.8018851210432462,
+      "test_accuracy": 0.7263,
+      "test_roc_auc": 0.8018363813281824,
+      "training_time_seconds": 70.57448780001141,
+      "inference_time_per_sample": 8.532149999809918e-05,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xrfm_10000.json"
+    },
+    {
+      "model": "Random Forest",
+      "sample_size": 10000,
+      "validation_accuracy": 0.7358,
+      "validation_roc_auc": 0.8147758799008027,
+      "test_accuracy": 0.73555,
+      "test_roc_auc": 0.8153134510601563,
+      "training_time_seconds": 0.5549049000255764,
+      "inference_time_per_sample": 3.5794249997707082e-06,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\random_forest_10000.json"
+    },
+    {
+      "model": "XGBoost",
+      "sample_size": 20000,
+      "validation_accuracy": 0.73945,
+      "validation_roc_auc": 0.8206809666899643,
+      "test_accuracy": 0.74015,
+      "test_roc_auc": 0.8221534661424109,
+      "training_time_seconds": 0.1491262999479659,
+      "inference_time_per_sample": 3.4257000079378483e-07,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xgboost_20000.json"
+    },
+    {
+      "model": "xRFM",
+      "sample_size": 20000,
+      "validation_accuracy": 0.72505,
+      "validation_roc_auc": 0.8016878347394454,
+      "test_accuracy": 0.7242,
+      "test_roc_auc": 0.8005116929292664,
+      "training_time_seconds": 207.72743480000645,
+      "inference_time_per_sample": 0.00013497238499985542,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\xrfm_20000.json"
+    },
+    {
+      "model": "Random Forest",
+      "sample_size": 20000,
+      "validation_accuracy": 0.73855,
+      "validation_roc_auc": 0.8165605247333381,
+      "test_accuracy": 0.73685,
+      "test_roc_auc": 0.8170648129246062,
+      "training_time_seconds": 0.9773845999734476,
+      "inference_time_per_sample": 4.328759998315945e-06,
+      "metrics_output_path": "C:\\Users\\Lucifer\\Documents\\New project\\results\\metrics\\scaling_runs\\random_forest_20000.json"
+    }
+  ]
+}

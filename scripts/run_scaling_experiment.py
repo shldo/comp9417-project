@@ -23,12 +23,10 @@ from src.preprocessing import (
 )
 from src.splitting import make_train_val_test_split
 from src.train_random_forest import (
-    DEFAULT_PARAM_GRID as DEFAULT_RF_PARAM_GRID,
     evaluate_binary_classifier as evaluate_random_forest,
     train_single_random_forest_model,
 )
 from src.train_xgboost import (
-    DEFAULT_PARAM_GRID as DEFAULT_XGB_PARAM_GRID,
     evaluate_binary_classifier as evaluate_xgboost,
     train_single_xgboost_model,
 )
@@ -51,8 +49,23 @@ JSON_OUTPUT_PATH = METRICS_DIR / "scaling_experiment_results.json"
 CSV_OUTPUT_PATH = METRICS_DIR / "scaling_experiment_results.csv"
 
 # Freeze the formal comparison configuration for each model.
-XGBOOST_FORMAL_PARAMS = copy.deepcopy(DEFAULT_XGB_PARAM_GRID[0])
-RANDOM_FOREST_FORMAL_PARAMS = copy.deepcopy(DEFAULT_RF_PARAM_GRID[0])
+# XGBoost params are taken from results/metrics/xgboost_metrics.json
+XGBOOST_FORMAL_PARAMS = {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+}
+
+# Random Forest params are taken from results/metrics/random_forest_metrics.json
+RANDOM_FOREST_FORMAL_PARAMS = {
+    "n_estimators": 300,
+    "max_depth": 12,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+}
+
 XRFM_FORMAL_PARAMS = copy.deepcopy(DEFAULT_XRFM_PARAMS)
 
 

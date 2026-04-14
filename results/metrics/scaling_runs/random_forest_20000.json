@@ -28,20 +28,20 @@
     ]
   },
   "params": {
-    "n_estimators": 200,
-    "max_depth": null,
+    "n_estimators": 300,
+    "max_depth": 12,
     "min_samples_leaf": 1,
     "max_features": "sqrt"
   },
   "validation_metrics": {
-    "accuracy": 0.73855,
-    "roc_auc": 0.8165605247333381,
-    "inference_time_per_sample": 4.212290002033114e-06
+    "accuracy": 0.73975,
+    "roc_auc": 0.8189222021890452,
+    "inference_time_per_sample": 4.807494999840856e-06
   },
   "test_metrics": {
-    "accuracy": 0.73685,
-    "roc_auc": 0.8170648129246062,
-    "training_time_seconds": 0.9773845999734476,
-    "inference_time_per_sample": 4.328759998315945e-06
+    "accuracy": 0.7384,
+    "roc_auc": 0.8202225233573407,
+    "training_time_seconds": 1.1204201999935322,
+    "inference_time_per_sample": 4.718964998028241e-06
   }
 }

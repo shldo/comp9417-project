@@ -1,13 +1,13 @@
 model,sample_size,validation_accuracy,validation_roc_auc,test_accuracy,test_roc_auc,training_time_seconds,inference_time_per_sample,metrics_output_path
-XGBoost,2000,0.72865,0.801235475333743,0.72075,0.8012196140424012,0.35683639999479055,3.102099988609552e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_2000.json
-xRFM,2000,0.7202,0.7815676001617169,0.71695,0.7842006796009062,1.928390999964904,5.365175000042655e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_2000.json
-Random Forest,2000,0.73245,0.8056142004780642,0.7297,0.8063367429803356,0.3356690999935381,3.0642049998277797e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_2000.json
-XGBoost,5000,0.7343,0.8144343288739304,0.733,0.8155598448466239,0.08372130000498146,3.1116000027395787e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_5000.json
-xRFM,5000,0.7199,0.7873608120459988,0.7225,0.790821058616734,28.511211799981538,3.0091710001579485e-05,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_5000.json
-Random Forest,5000,0.73195,0.8112386648245504,0.73285,0.813513985193214,0.40030650002881885,4.163145000347868e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_5000.json
-XGBoost,10000,0.73755,0.8191390327140421,0.73635,0.8208135258956097,0.11816860001999885,3.3307000121567397e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_10000.json
-xRFM,10000,0.72755,0.8018851210432462,0.7263,0.8018363813281824,70.57448780001141,8.532149999809918e-05,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_10000.json
-Random Forest,10000,0.7358,0.8147758799008027,0.73555,0.8153134510601563,0.5549049000255764,3.5794249997707082e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_10000.json
-XGBoost,20000,0.73945,0.8206809666899643,0.74015,0.8221534661424109,0.1491262999479659,3.4257000079378483e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_20000.json
-xRFM,20000,0.72505,0.8016878347394454,0.7242,0.8005116929292664,207.72743480000645,0.00013497238499985542,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_20000.json
-Random Forest,20000,0.73855,0.8165605247333381,0.73685,0.8170648129246062,0.9773845999734476,4.328759998315945e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_20000.json
+XGBoost,2000,0.72865,0.801235475333743,0.72075,0.8012196140424012,0.38799809996271506,3.5069499863311647e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_2000.json
+xRFM,2000,0.7202,0.7815676001617169,0.71695,0.7842006796009062,1.8957812000298873,5.456839999533258e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_2000.json
+Random Forest,2000,0.7341,0.8081300618744826,0.7317,0.8092076314593704,0.4567869999445975,4.775589998462238e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_2000.json
+XGBoost,5000,0.7343,0.8144343288739304,0.733,0.8155598448466239,0.0991105999564752,3.507050016196445e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_5000.json
+xRFM,5000,0.7199,0.7873608120459988,0.7225,0.790821058616734,28.815940200001933,3.3379259999492205e-05,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_5000.json
+Random Forest,5000,0.73425,0.8142133057982577,0.7365,0.8156677636228581,0.5031671000178903,4.671720002079382e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_5000.json
+XGBoost,10000,0.73755,0.8191390327140421,0.73635,0.8208135258956097,0.10905440000351518,2.9032499878667295e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_10000.json
+xRFM,10000,0.72755,0.8018851210432462,0.7263,0.8018363813281824,71.795623300015,8.668816999997943e-05,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_10000.json
+Random Forest,10000,0.7382,0.8163896704125584,0.7349,0.8171835020377898,0.7451400000136346,4.72392000083346e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_10000.json
+XGBoost,20000,0.73945,0.8206809666899643,0.74015,0.8221534661424109,0.19206420000409707,3.1218000221997497e-07,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xgboost_20000.json
+xRFM,20000,0.72505,0.8016878347394454,0.7242,0.8005116929292664,219.2501427999814,0.00012978358999826014,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\xrfm_20000.json
+Random Forest,20000,0.73975,0.8189222021890452,0.7384,0.8202225233573407,1.1204201999935322,4.718964998028241e-06,C:\Users\Lucifer\Documents\New project\results\metrics\scaling_runs\random_forest_20000.json

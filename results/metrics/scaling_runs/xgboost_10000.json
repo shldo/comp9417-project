@@ -37,12 +37,12 @@
   "validation_metrics": {
     "accuracy": 0.73755,
     "roc_auc": 0.8191390327140421,
-    "inference_time_per_sample": 3.058399975998327e-07
+    "inference_time_per_sample": 2.986699983011931e-07
   },
   "test_metrics": {
     "accuracy": 0.73635,
     "roc_auc": 0.8208135258956097,
-    "training_time_seconds": 0.11816860001999885,
-    "inference_time_per_sample": 3.3307000121567397e-07
+    "training_time_seconds": 0.10905440000351518,
+    "inference_time_per_sample": 2.9032499878667295e-07
   }
 }

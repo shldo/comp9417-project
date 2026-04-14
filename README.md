@@ -119,47 +119,39 @@ The main output files for reporting are:
 
 Additional per-model metrics and tuning outputs are also stored under `results/metrics/`.
 
-## How to Run
+## Results
 
-1. Install dependencies:
+The figures below are generated from the strict scaling protocol:
 
-```bash
-pip install -r requirements.txt
-```
+- one fixed full `train/validation/test` split on the full dataset
+- subsampling applied only to the fixed training split
+- unchanged validation and test sets across all sample sizes and all models
 
-2. Place the dataset at:
+### Test ROC-AUC vs Sample Size
 
-```text
-data/raw/sleep_health_dataset.csv
-```
+![Test ROC-AUC vs Sample Size](results/figures/test_roc_auc_vs_sample_size.png)
 
-3. Check the environment:
+### Training Time vs Sample Size (Log Scale)
 
-```bash
-python scripts/check_environment.py
-```
+![Training Time vs Sample Size (Log Scale)](results/figures/training_time_vs_sample_size_log.png)
 
-4. Run individual model pipelines if needed:
+### Concise Scaling Summary
 
-```bash
-python scripts/run_xgboost.py
-python scripts/run_xrfm.py
-python scripts/run_random_forest.py
-```
-
-5. Run the unified scaling experiment:
-
-```bash
-python scripts/run_scaling_experiment.py
-```
-
-6. Generate figures and the concise summary table:
-
-```bash
-python scripts/plot_scaling_results.py
-```
+| Model | Sample Size | Test Accuracy | Test ROC-AUC | Training Time (s) | Inference / Sample (s) |
+|---|---:|---:|---:|---:|---:|
+| Random Forest | 2000 | 0.7297 | 0.8063 | 0.3357 | 3.0642e-06 |
+| Random Forest | 5000 | 0.7329 | 0.8135 | 0.4003 | 4.1631e-06 |
+| Random Forest | 10000 | 0.7356 | 0.8153 | 0.5549 | 3.5794e-06 |
+| Random Forest | 20000 | 0.7369 | 0.8171 | 0.9774 | 4.3288e-06 |
+| XGBoost | 2000 | 0.7208 | 0.8012 | 0.3568 | 3.1021e-07 |
+| XGBoost | 5000 | 0.7330 | 0.8156 | 0.0837 | 3.1116e-07 |
+| XGBoost | 10000 | 0.7364 | 0.8208 | 0.1182 | 3.3307e-07 |
+| XGBoost | 20000 | 0.7402 | 0.8222 | 0.1491 | 3.4257e-07 |
+| xRFM | 2000 | 0.7170 | 0.7842 | 1.9284 | 5.3652e-06 |
+| xRFM | 5000 | 0.7225 | 0.7908 | 28.5112 | 3.0092e-05 |
+| xRFM | 10000 | 0.7263 | 0.8018 | 70.5745 | 8.5321e-05 |
+| xRFM | 20000 | 0.7242 | 0.8005 | 207.7274 | 1.3497e-04 |
 
 ## Notes
 
-This repository currently covers the sleep binary classification line of the group project.  
-Interpretability analysis and additional datasets may be completed separately by other parts of the group workflow.
+This repository currently covers the sleep binary classification line of the group project.
